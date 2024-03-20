@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\gym_oop_2024.Application\gym_oop_2024.Application.csproj"/>
+        <ProjectReference Include="..\Infrastructure\gym_oop_2024.Infrastructure.Persistence\gym_oop_2024.Infrastructure.Persistence.csproj"/>
+        <ProjectReference Include="..\Presentation\gym_oop_2024.Presentation.Http\gym_oop_2024.Presentation.Http.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Itmo.Dev.Platform.Logging"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="appsettings.*.json">
+            <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
+    </ItemGroup>
+
+</Project>
