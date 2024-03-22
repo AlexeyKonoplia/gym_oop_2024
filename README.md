@@ -59,6 +59,179 @@ public class UserSubscription
     public DateTime EndDate;
 }
 ```
+
+## Методы работы онлайн-сервиса(REST API)
+
+### `POST /registration` – Регистрация пользователя
+Тело запроса: POST
+
+
+Request:
+```json
+{
+  "name": "Иван",
+  "last_name": "Иванов",
+  "surname": "Иванович",
+  "email": "ivanov2000@mail.ru",
+  "phone": "9999999999",
+  "password": "qwerty"
+}
+```
+Response:
+```json
+{
+  "status": "200",
+  "message": "User registered successfully"
+}
+```
+
+
+### `POST /login` - Авторизация пользователя
+Тело запроса: POST
+
+
+Request:
+```json
+{
+  "email": "email@email.com",
+  "password": "qwerty"
+}
+```
+Response:
+```json
+{
+  "userId": "123",
+  "Message": "You have successfully logged in!",
+  "access token": "123lfweo1234K"
+}
+```
+
+### `GET /profile` - Личный кабинет пользователя
+Тело запроса: GET
+
+
+Request:
+```json
+{
+  "userId": "123"
+}
+```
+Response:
+```json
+{
+  "name": "Иван",
+  "last_name": "Иванов",
+  "surname": "Иванович",
+  "email": "ivanov2000@mail.ru",
+  "phone": "9999999999",
+  "subscription_date": "1111-11-11 11:11",
+  "subscription_info": "something"
+}
+```
+
+### `PUT /profile/change-data` - Изменение информации о пользователе
+Тело запроса: PUT
+
+
+Request:
+```json
+{
+  "new_user_info": "info"
+}
+```
+Response:
+```json
+{
+  "status": "success",
+  "message": "Account info changed successfully!"
+}
+```
+
+### `POST /payment` - Оплата
+Тело запроса: GET
+
+
+Request:
+```json
+{
+  "subscription_id": 123,
+  "user_id": 456,
+  "payment_method": "credit_card",
+  "amount": 15000
+}
+```
+Response:
+```json
+{
+  "status": "success",
+  "message": "Payment was successful!"
+}
+```
+
+### `POST /payment` - Оплата
+Тело запроса: GET
+
+
+Request:
+```json
+{
+  "subscription_id": 123,
+  "user_id": 456,
+  "payment_method": "credit_card",
+  "amount": 15000
+}
+```
+Response:
+```json
+{
+  "status": "success",
+  "message": "Payment successful"
+}
+```
+
+### `GET /subscriptions` - Список абонементов
+Тело запроса: GET
+
+
+Response:
+```json
+{
+   "subscriptions": [
+     {
+       "id": 123,
+       "type": "multicard",
+       "price": 50.00,
+       "description": "legendary subscription"
+     }, 
+     {
+       "id": 124,
+       "type": "annual", 
+       "price": 500.00,
+       "description": "Not bad subscription"
+     }]
+}
+```
+
+### `/profile/freeze-subscription` - Заморозка абонемента
+Тело запроса: GET
+
+
+Request:
+```json
+{
+  "userId": 123,
+  "freezeDuration": "1 month",
+  "isActive": false
+}
+```
+Response:
+```json
+{
+  "status": "success",
+  "message": "Subscription was frozen for 1 month!"
+}
+```
+
 ## ERD Diagramm
 ![image](https://github.com/AlexeyKonoplia/gym_oop_2024/assets/112964950/b1cddf13-de94-44e8-af31-80392d5498d6)
 ERD диаграмма  
