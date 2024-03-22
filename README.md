@@ -232,6 +232,19 @@ Response:
 }
 ```
 
+##Интерфейсы
+```C#
+public interface IGymRepository
+{
+    Gym GetGymById(int gymId);
+    IEnumerable<Gym> GetAllGyms();
+    IEnumerable<Gym> GetAllGymsByAddress(string GymAddress);
+    void AddGym(Gym gym);
+    void UpdateGym(Gym gym);
+    void DeleteGym(int gymId);
+}
+```
+
 ## ERD Diagramm
 ![image](https://github.com/AlexeyKonoplia/gym_oop_2024/assets/112964950/b1cddf13-de94-44e8-af31-80392d5498d6)
 ERD диаграмма  
