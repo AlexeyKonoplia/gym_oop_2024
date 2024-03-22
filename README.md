@@ -12,7 +12,7 @@
 
 ## Доменные сущности:
 Зал
-```
+```C#
 public class Gyms
 {
     public int GymId;
@@ -22,7 +22,7 @@ public class Gyms
 ```
 
 Пользователь
-```
+```C#
 public class User
 {
     public int UserId;
@@ -34,7 +34,7 @@ public class User
 }
 ```
 Абонемент
-```
+```C#
 public class Suscription
 {
     public int SubscriptionId;
@@ -47,7 +47,7 @@ public class Suscription
 ```
 
 Подписка пользователя
-```
+```C#
 public class UserSubscription
 {
     public int UserSubscriptionId;
