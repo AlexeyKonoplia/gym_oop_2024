@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿# User-specific files
+=======
+# User-specific files
+>>>>>>> b2195f4058396ce7a4f29cd2c8aefa3586c48fb2
 *.rsuser
 *.suo
 *.user
@@ -358,4 +362,8 @@ FodyWeavers.xsd
 *.diagsession
 /.vs
 
+<<<<<<< HEAD
 .idea/
+=======
+.idea/
+>>>>>>> b2195f4058396ce7a4f29cd2c8aefa3586c48fb2
