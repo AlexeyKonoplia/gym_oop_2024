@@ -232,7 +232,7 @@ Response:
 }
 ```
 
-##Интерфейсы
+## Интерфейсы
 ```C#
 public interface IGymRepository
 {
@@ -242,6 +242,41 @@ public interface IGymRepository
     void AddGym(Gym gym);
     void UpdateGym(Gym gym);
     void DeleteGym(int gymId);
+}
+```
+
+```C#
+public interface ISubscriptionRepository
+{
+    Subscription GetSubscriptionById(int subscriptionId);
+    IEnumerable<Subscription> GetAllSubscriptions();
+    IEnumerable<Subscription> GetSubscriptionsByGymId(int gymId);
+    void AddSubscription(Subscription subscription);
+    void UpdateSubscription(Subscription subscription);
+    void DeleteSubscription(int subscriptionId);
+}
+```
+
+```C#
+public interface IUserRepository
+{
+    User GetUserById(int userId);
+    User GetUserByPhone(string Phone);
+    IEnumerable<User> GetAllUsers();
+    void AddUser(User user);
+    void UpdateUser(User user);
+    void DeleteUser(int userId);
+}
+```
+
+```C#
+public interface IUserSubscriptionRepository
+{
+    IEnumerable<UserSubscription> GetUserSubscriptionsByUserId(int userId);
+    IEnumerable<UserSubscription> GetActiveUserSubscriptionsByUserId(int userId);
+    void AddUserSubscription(UserSubscription userSubscription);
+    void UpdateUserSubscription(UserSubscription userSubscription);
+    void DeleteUserSubscription(int userSubscriptionId);
 }
 ```
 
