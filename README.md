@@ -10,4 +10,5 @@
 Гусев Никита Сергеевич
 Брылев Максим Иванович
 
+# ERD Diagramm
 ![image](https://github.com/AlexeyKonoplia/gym_oop_2024/assets/112964950/b1cddf13-de94-44e8-af31-80392d5498d6)
