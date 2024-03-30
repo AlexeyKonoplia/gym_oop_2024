@@ -13,11 +13,11 @@
 ## Доменные сущности:
 Зал
 ```C#
-public class Gyms
+public class Gym
 {
-    public int GymId;
-    public string GymName;
-    public string GymAddress;
+    public int? GymId { get; set; };
+    public string? GymName { get; set; };
+    public string? GymAddress { get; set; };
 }
 ```
 
@@ -25,24 +25,24 @@ public class Gyms
 ```C#
 public class User
 {
-    public int UserId;
-    public string Name;
-    public string LastName;
-    public string Surname;
-    public string Email;
-    public string Phone;
+    public int? UserId { get; set; };
+    public string? Name { get; set; };
+    public string? LastName { get; set; };
+    public string Surname { get; set; };
+    public string? Email { get; set; };
+    public string? Phone { get; set; };
 }
 ```
 Абонемент
 ```C#
 public class Suscription
 {
-    public int SubscriptionId;
-    public string GymId; // foreign
-    public string SubscriptionName;
-    public double SubscriptionPrice;
-    public string SubscriptionDescription;
-    public int DefaultDurationInMonths;
+    public int? SubscriptionId { get; set; };
+    public Gym? Gym { get; set; }; // foreign
+    public string? SubscriptionName { get; set; };
+    public double? SubscriptionPrice { get; set; };
+    public string? SubscriptionDescription { get; set; };
+    public int? DefaultDurationInMonths { get; set; };
 }
 ```
 
@@ -50,13 +50,13 @@ public class Suscription
 ```C#
 public class UserSubscription
 {
-    public int UserSubscriptionId;
-    public int SubscriptionId; // foreign
-    public int UserId; // foreign
-    public bool IsActive;
-    public bool IsMulticard;
-    public DateTime StartDate;
-    public DateTime EndDate;
+    public int? UserSubscriptionId { get; set; };
+    public Subscription? Subscription { get; set; }; // foreign
+    public User? User { get; set; }; // foreign
+    public bool? IsActive { get; set; };
+    public bool? IsMulticard { get; set; };
+    public DateTime StartDate { get; set; };
+    public DateTime EndDate { get; set; };
 }
 ```
 
