@@ -164,27 +164,6 @@ Response:
 ```json
 {
   "status": "success",
-  "message": "Payment was successful!"
-}
-```
-
-### `POST /payment` - Оплата
-Тело запроса: GET
-
-
-Request:
-```json
-{
-  "subscription_id": 123,
-  "user_id": 456,
-  "payment_method": "credit_card",
-  "amount": 15000
-}
-```
-Response:
-```json
-{
-  "status": "success",
   "message": "Payment successful"
 }
 ```
