@@ -12,7 +12,7 @@
 
 ## Доменные сущности:
 Зал
-```
+```C#
 public class Gyms
 {
     public int GymId;
@@ -22,7 +22,7 @@ public class Gyms
 ```
 
 Пользователь
-```
+```C#
 public class User
 {
     public int UserId;
@@ -34,7 +34,7 @@ public class User
 }
 ```
 Абонемент
-```
+```C#
 public class Suscription
 {
     public int SubscriptionId;
@@ -47,7 +47,7 @@ public class Suscription
 ```
 
 Подписка пользователя
-```
+```C#
 public class UserSubscription
 {
     public int UserSubscriptionId;
@@ -229,6 +229,54 @@ Response:
 {
   "status": "success",
   "message": "Subscription was frozen for 1 month!"
+}
+```
+
+## Интерфейсы
+```C#
+public interface IGymRepository
+{
+    Gym GetGymById(int gymId);
+    IEnumerable<Gym> GetAllGyms();
+    IEnumerable<Gym> GetAllGymsByAddress(string GymAddress);
+    void AddGym(Gym gym);
+    void UpdateGym(Gym gym);
+    void DeleteGym(int gymId);
+}
+```
+
+```C#
+public interface ISubscriptionRepository
+{
+    Subscription GetSubscriptionById(int subscriptionId);
+    IEnumerable<Subscription> GetAllSubscriptions();
+    IEnumerable<Subscription> GetSubscriptionsByGymId(int gymId);
+    void AddSubscription(Subscription subscription);
+    void UpdateSubscription(Subscription subscription);
+    void DeleteSubscription(int subscriptionId);
+}
+```
+
+```C#
+public interface IUserRepository
+{
+    User GetUserById(int userId);
+    User GetUserByPhone(string Phone);
+    IEnumerable<User> GetAllUsers();
+    void AddUser(User user);
+    void UpdateUser(User user);
+    void DeleteUser(int userId);
+}
+```
+
+```C#
+public interface IUserSubscriptionRepository
+{
+    IEnumerable<UserSubscription> GetUserSubscriptionsByUserId(int userId);
+    IEnumerable<UserSubscription> GetActiveUserSubscriptionsByUserId(int userId);
+    void AddUserSubscription(UserSubscription userSubscription);
+    void UpdateUserSubscription(UserSubscription userSubscription);
+    void DeleteUserSubscription(int userSubscriptionId);
 }
 ```
 
