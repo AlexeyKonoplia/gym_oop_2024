@@ -39,3 +39,18 @@ app.UseSwaggerUI();
 app.MapControllers();
 
 await app.RunAsync();
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructurePersistence(builder.Configuration);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Host.AddPlatformSerilog(builder.Configuration);
+builder.Services.AddUtcDateTimeProvider();
+
+WebApplication app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseRouting();
+app.MapControllers();
