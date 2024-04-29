@@ -1,4 +1,6 @@
-﻿namespace a;
+﻿using gym_oop_2024.Application.Models;
+
+namespace a;
 
 public interface IGymRepository
 {
