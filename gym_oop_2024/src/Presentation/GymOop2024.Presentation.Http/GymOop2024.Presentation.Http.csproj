@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <RootNamespace>gym_oop_2024.Presentation.Http</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\GymOop2024.Application.Abstractions\GymOop2024.Application.Abstractions.csproj" />
+      <ProjectReference Include="..\..\Application\GymOop2024.Application.Models\GymOop2024.Application.Models.csproj" />
+    </ItemGroup>
+
+</Project>

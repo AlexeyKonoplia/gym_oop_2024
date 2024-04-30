@@ -4,13 +4,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A5DDAC88-3B8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Appication", "Appication", "{472EDB5E-9F2C-4551-AC96-D52701C1A636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Application", "src\Application\gym_oop_2024.Application\gym_oop_2024.Application.csproj", "{CB41BAB3-2742-49A4-9534-C33C9CC21103}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Application", "src\Application\GymOop2024.Application\GymOop2024.Application.csproj", "{CB41BAB3-2742-49A4-9534-C33C9CC21103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Application.Abstractions", "src\Application\gym_oop_2024.Application.Abstractions\gym_oop_2024.Application.Abstractions.csproj", "{0284A1FB-1B1E-4B7A-B6B3-4D34E5CF287A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Application.Abstractions", "src\Application\GymOop2024.Application.Abstractions\GymOop2024.Application.Abstractions.csproj", "{0284A1FB-1B1E-4B7A-B6B3-4D34E5CF287A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Application.Contracts", "src\Application\gym_oop_2024.Application.Contracts\gym_oop_2024.Application.Contracts.csproj", "{F2C0DDDE-EECA-4AA9-8D04-A4B054A39D4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Application.Contracts", "src\Application\GymOop2024.Application.Contracts\GymOop2024.Application.Contracts.csproj", "{F2C0DDDE-EECA-4AA9-8D04-A4B054A39D4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Application.Models", "src\Application\gym_oop_2024.Application.Models\gym_oop_2024.Application.Models.csproj", "{2E598FB2-8270-4A19-B393-8A67583EDE40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Application.Models", "src\Application\GymOop2024.Application.Models\GymOop2024.Application.Models.csproj", "{2E598FB2-8270-4A19-B393-8A67583EDE40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{763BFE0A-AFCF-4440-931D-52F4F1FD5DD0}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,11 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{683CE8ED-DAEA-4EAB-B1B4-FF5098763CFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Infrastructure.Persistence", "src\Infrastructure\gym_oop_2024.Infrastructure.Persistence\gym_oop_2024.Infrastructure.Persistence.csproj", "{E0C7A0FA-E3B6-4C7C-8360-CD72806AAC66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Infrastructure.Persistence", "src\Infrastructure\GymOop2024.Infrastructure.Persistence\GymOop2024.Infrastructure.Persistence.csproj", "{E0C7A0FA-E3B6-4C7C-8360-CD72806AAC66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024", "src\gym_oop_2024\gym_oop_2024.csproj", "{AE85F8D2-4986-40AE-A92C-683CE1DB59BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024", "src\GymOop2024\GymOop2024.csproj", "{AE85F8D2-4986-40AE-A92C-683CE1DB59BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Presentation.Http", "src\Presentation\gym_oop_2024.Presentation.Http\gym_oop_2024.Presentation.Http.csproj", "{AE079871-926E-427E-9F16-8FFD3C6B6CC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymOop2024.Presentation.Http", "src\Presentation\GymOop2024.Presentation.Http\GymOop2024.Presentation.Http.csproj", "{AE079871-926E-427E-9F16-8FFD3C6B6CC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

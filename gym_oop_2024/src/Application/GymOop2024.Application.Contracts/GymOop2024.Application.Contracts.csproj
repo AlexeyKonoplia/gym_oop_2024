@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <ProjectReference Include="..\GymOop2024.Application.Models\GymOop2024.Application.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+    </ItemGroup>
+
+</Project>
