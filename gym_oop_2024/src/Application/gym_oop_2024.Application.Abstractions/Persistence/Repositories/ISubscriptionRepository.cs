@@ -1,13 +1,13 @@
 ﻿using gym_oop_2024.Application.Models;
 
-namespace a;
+namespace gym_oop_2024.Application.Abstractions.Repositories;
 
 public interface ISubscriptionRepository
 {
-    Subscription GetSubscriptionById(int subscriptionId);
+    Subscription GetById(Guid subscriptionId);
     IEnumerable<Subscription> GetAllSubscriptions();
-    IEnumerable<Subscription> GetSubscriptionsByGymId(int gymId);
-    void AddSubscription(Subscription subscription);
-    void UpdateSubscription(Subscription subscription);
-    void DeleteSubscription(int subscriptionId);
+    IEnumerable<Subscription> GetSubscriptionsByGymId(Guid gymId);
+    Subscription Add(Subscription subscription);
+    void Update(Guid id, Subscription subscription);
+    void Remove(Guid subscriptionId);
 }

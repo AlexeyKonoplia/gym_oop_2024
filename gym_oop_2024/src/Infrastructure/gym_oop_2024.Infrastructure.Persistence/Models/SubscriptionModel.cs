@@ -1,7 +1,10 @@
-﻿namespace gym_oop_2024.Application.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class Subscription
+namespace gym_oop_2024.Infrastructure.Persistence.Models;
+
+public class SubscriptionModel
 {
+    [Key]
     public Guid? SubscriptionId { get; set; }
     public Guid? GymId { get; set; } // foreign
     public string? SubscriptionName { get; set; }
