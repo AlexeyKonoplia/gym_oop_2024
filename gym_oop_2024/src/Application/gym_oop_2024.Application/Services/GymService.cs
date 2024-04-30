@@ -1,5 +1,4 @@
-using a;
-using gym_oop_2024.Application.Abstractions.Persistence.Repositories;
+using gym_oop_2024.Application.Abstractions.Repositories;
 using gym_oop_2024.Application.Models;
 using gym_oop_2024.Application.Models.Models.Interfaces;
 

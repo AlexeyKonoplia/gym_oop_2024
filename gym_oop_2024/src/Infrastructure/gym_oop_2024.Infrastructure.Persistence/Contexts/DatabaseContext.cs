@@ -20,7 +20,7 @@ public class DatabaseContext : DbContext
 
     public DbSet<SubscriptionModel> Subscriptions { get; protected init; } = null!;
 
-    public DbSet<Gym> Gyms { get; protected init; } = null!;
+    public DbSet<GymModel> Gyms { get; protected init; } = null!;
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

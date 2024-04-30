@@ -33,7 +33,7 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection AddContext(this IServiceCollection collection, IConfiguration configuration)
     {
-        collection.AddDbContext<DatabaseContext>(options =>
+        collection.AddDbContext<DbContext>(options =>
             options.UseNpgsql(configuration.GetSection("Infrastructure:Persistence:Postgres:ConnectionString").Value));
         return collection;
     }
