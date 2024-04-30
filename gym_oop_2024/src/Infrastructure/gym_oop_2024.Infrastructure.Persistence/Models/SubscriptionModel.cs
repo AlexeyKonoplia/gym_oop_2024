@@ -2,11 +2,11 @@
 
 namespace gym_oop_2024.Infrastructure.Persistence.Models;
 
-public class SubscritionModel
+public class SubscriptionModel
 {
     [Key]
-    public int? SubscriptionId { get; set; }
-    public Gym? Gym { get; set; } // foreign
+    public Guid? SubscriptionId { get; set; }
+    public Guid? GymId { get; set; } // foreign
     public string? SubscriptionName { get; set; }
     public double? SubscriptionPrice { get; set; }
     public string? SubscriptionDescription { get; set; }

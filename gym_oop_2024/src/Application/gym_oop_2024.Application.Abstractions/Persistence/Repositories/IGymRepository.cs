@@ -1,6 +1,6 @@
 ﻿using gym_oop_2024.Application.Models;
 
-namespace a;
+namespace gym_oop_2024.Application.Abstractions.Repositories;
 
 public interface IGymRepository
 {

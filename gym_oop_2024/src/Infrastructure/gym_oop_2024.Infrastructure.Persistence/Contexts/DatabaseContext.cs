@@ -1,23 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using gym_oop_2024.Application.Models;
+using gym_oop_2024.Infrastructure.Persistence.Models;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace gym_oop_2024.Infrastructure.Persistence.Contexts;
 
-public class ApplicationDbContext : DbContext
+public class DatabaseContext : DbContext
 {
-    public ApplicationDbContext(DbContextOptions<DbContext> options) : base(options)
+    public DatabaseContext(DbContextOptions<DbContext> options) : base(options)
     {
         Database.EnsureCreated();
     }
 
-    protected ApplicationDbContext(DbContextOptions options) : base(options) { }
+    protected DatabaseContext(DbContextOptions options) : base(options) { }
 
     public DbSet<User> Users { get; protected init; } = null!;
 
     public DbSet<UserSubscription> UserSubscriptions { get; protected init; } = null!;
 
-    public DbSet<Subscription> Subscriptions { get; protected init; } = null!;
+    public DbSet<SubscriptionModel> Subscriptions { get; protected init; } = null!;
 
     public DbSet<Gym> Gyms { get; protected init; } = null!;
     
