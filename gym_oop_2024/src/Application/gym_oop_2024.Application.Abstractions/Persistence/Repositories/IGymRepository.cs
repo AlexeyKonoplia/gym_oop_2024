@@ -4,10 +4,10 @@ namespace a;
 
 public interface IGymRepository
 {
-    Gym GetGymById(int gymId);
     IEnumerable<Gym> GetAllGyms();
-    IEnumerable<Gym> GetAllGymsByAddress(string GymAddress);
-    void AddGym(Gym gym);
-    void UpdateGym(Gym gym);
-    void DeleteGym(int gymId);
+    Gym GetGymByAddress(string gymAddress);
+    Gym Add(Gym gym);
+    Gym Update(Guid gymId, Gym gym);
+    Gym GetById(Guid gymId);
+    void Remove(Gym gym);
 }
