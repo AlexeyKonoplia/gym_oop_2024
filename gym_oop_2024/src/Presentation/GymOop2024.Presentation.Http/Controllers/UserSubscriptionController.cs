@@ -18,7 +18,7 @@ public class UserSubscriptionController: ControllerBase
     [HttpGet("{id}")]
     public ActionResult<Gym> Get(Guid id)
     {
-        var gym = _userSubscriptionService.GetUserSubscriptionById(id);
+        var gym = _userSubscriptionService.GetUserSubscriptionByUserId(id);
 
         return Ok(gym);
     }
@@ -26,7 +26,10 @@ public class UserSubscriptionController: ControllerBase
     [HttpPost]
     public ActionResult<UserSubscription> Post(UserSubscription userSubscription)
     {
-
+        if (userSubscription == null)
+        {
+            return BadRequest();
+        }
         var createdUserSub = _userSubscriptionService.AddUserSubscription(userSubscription);
         return CreatedAtAction(nameof(Get), new { id = userSubscription.UserSubscriptionId }, createdUserSub);
     }
@@ -36,9 +39,9 @@ public class UserSubscriptionController: ControllerBase
     {
         try
         {
-            var userSubscription = _userSubscriptionService.GetUserSubscriptionById(id);
+            var userSubscription = _userSubscriptionService.GetUserSubscriptionByUserId(id);
 
-            _userSubscriptionService.RemoveUserSubscription(userSubscription);
+            _userSubscriptionService.DeleteUserSubscription(userSubscription);
             return NoContent();
         }
         catch (Exception)
@@ -49,16 +52,16 @@ public class UserSubscriptionController: ControllerBase
     [HttpPut("{id}")]
     public IActionResult UpdateUserSubscription(Guid id, UserSubscription updatedUserSub)
     {
-        if (id != updatedUserSub.GymId)
+        if (id != updatedUserSub.UserSubscriptionId)
         {
             return BadRequest();
         }
 
         try
         {
-            var existGym = _userSubscriptionService.GetUserSubscriptionById(id);
+            var existGym = _userSubscriptionService.GetUserSubscriptionByUserId(id);
 
-            _userSubscriptionService.UpdateAddUserSubscription(id, updatedUserSub);
+            _userSubscriptionService.UpdateUserSubscription(id, updatedUserSub);
             return NoContent();
         }
         catch (Exception)

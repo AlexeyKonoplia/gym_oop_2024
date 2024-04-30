@@ -18,7 +18,7 @@ public class UserSubscriptionRepository : BaseRepository<UserSubscription, UserS
         DbSet = dbSet;
     }
     
-    public UserSubscription GetUserSubscriptionsByUserId(Guid userId)
+    public UserSubscription GetUserSubscriptionByUserId(Guid userId)
     {
         var userSubscriptionModel = _context.UserSubscriptions
             .Include(userSubscription => userSubscription.SubscriptionId)
@@ -40,6 +40,11 @@ public class UserSubscriptionRepository : BaseRepository<UserSubscription, UserS
             StartDate = userSubscriptionModel.StartDate,
             EndDate = userSubscriptionModel.EndDate,
         };
+    }
+
+    public IEnumerable<UserSubscription> GetUserSubscriptionsByUserId(Guid userId)
+    {
+        throw new NotImplementedException();
     }
 
     public UserSubscription GetActiveUserSubscriptionsByUserId(Guid userId)

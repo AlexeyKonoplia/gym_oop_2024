@@ -1,33 +1,44 @@
+using gym_oop_2024.Infrastructure.Persistence.Repositories;
 using GymOop2024.Application.Models;
 using GymOop2024.Application.Models.Models.Entities;
 using GymOop2024.Application.Models.Models.Interfaces;
+using GymOop2024.Infrastructure.Persistence.Repositories;
 
 namespace GymOop2024.Application.Services;
 
 public class UserSubscriptionServices : IUserSubscriptionServices
 {
-    public IEnumerable<UserSubscription> GetUserSubscriptionsByUserId(int userId)
+    private readonly UserSubscriptionRepository _userSubscriptionRepository;
+
+    public UserSubscriptionServices(UserSubscriptionRepository userSubscriptionRepository)
     {
-        throw new NotImplementedException();
+        _userSubscriptionRepository = userSubscriptionRepository;
     }
 
-    public IEnumerable<UserSubscription> GetActiveUserSubscriptionsByUserId(int userId)
+    public UserSubscription AddUserSubscription(UserSubscription userSubscription)
     {
-        throw new NotImplementedException();
+        _userSubscriptionRepository.AddUserSubscription(userSubscription);
+
+        return userSubscription;
     }
 
-    public void AddUserSubscription(UserSubscription userSubscription)
+    public void UpdateUserSubscription(Guid userSubId, UserSubscription userSubscription)
     {
-        throw new NotImplementedException();
+        _userSubscriptionRepository.Update(userSubId, userSubscription);
     }
 
-    public void UpdateUserSubscription(UserSubscription userSubscription)
+    public void DeleteUserSubscription(UserSubscription userSubscriptionId)
     {
-        throw new NotImplementedException();
+        _userSubscriptionRepository.Remove(userSubscriptionId);
     }
 
-    public void DeleteUserSubscription(int userSubscriptionId)
+    public UserSubscription GetUserSubscriptionByUserId(Guid userSubId)
     {
-        throw new NotImplementedException();
+        return _userSubscriptionRepository.GetUserSubscriptionByUserId(userSubId);
+    }
+
+    public IEnumerable<UserSubscription> GetAllUserSubscriptions()
+    {
+        return _userSubscriptionRepository.GetAllUserSubscriptions();
     }
 }
