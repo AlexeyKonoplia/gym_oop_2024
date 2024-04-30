@@ -1,12 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
+<<<<<<< HEAD
         <ProjectReference Include="..\..\Infrastructure\gym_oop_2024.Infrastructure.Persistence\gym_oop_2024.Infrastructure.Persistence.csproj" />
+=======
+>>>>>>> d86933aa3bbcf6737600a6350301c69934350ac1
         <ProjectReference Include="..\gym_oop_2024.Application.Abstractions\gym_oop_2024.Application.Abstractions.csproj"/>
         <ProjectReference Include="..\gym_oop_2024.Application.Contracts\gym_oop_2024.Application.Contracts.csproj"/>
         <ProjectReference Include="..\gym_oop_2024.Application.Models\gym_oop_2024.Application.Models.csproj" />
     </ItemGroup>
 
+<<<<<<< HEAD
+=======
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"/>
+    </ItemGroup>
+>>>>>>> d86933aa3bbcf6737600a6350301c69934350ac1
 
 
 </Project>

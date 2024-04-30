@@ -1,3 +1,5 @@
+using a;
+using gym_oop_2024.Application.Abstractions.Persistence.Repositories;
 using gym_oop_2024.Application.Models;
 using gym_oop_2024.Application.Models.Models.Interfaces;
 
@@ -5,33 +7,34 @@ namespace gym_oop_2024.Application.Services;
 
 public class GymService : IGymService
 {
-    public Gym GetGymById(int gymId)
+    private readonly IGymRepository _gymRepository;
+
+    public GymService(IGymRepository gymRepository)
     {
-        throw new NotImplementedException();
+        _gymRepository = gymRepository;
+    }
+    public Gym AddGym(Gym gym)
+    {
+        _gymRepository.Add(gym);
+
+        return gym;
+    }
+    
+    public Gym UpdateGym(Guid gymId, Gym gym)
+    {
+        return _gymRepository.Update(gymId, gym);
+    }
+    public void RemoveGym(Gym gym)
+    {
+        _gymRepository.Remove(gym);
+    }
+    public Gym GetGymById(Guid gymId)
+    {
+        return _gymRepository.GetById(gymId);
     }
 
-    public IEnumerable<Gym> GetAllGyms()
+    public IEnumerable<Gym> GetGyms()
     {
-        throw new NotImplementedException();
-    }
-
-    public IEnumerable<Gym> GetAllGymsByAddress(string GymAddress)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void AddGym(Gym gym)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void UpdateGym(Gym gym)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void DeleteGym(int gymId)
-    {
-        throw new NotImplementedException();
+        return _gymRepository.GetAllGyms();
     }
 }

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A5DDAC88-3B8F-4674-8E0C-F8A50A52ACD3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{472EDB5E-9F2C-4551-AC96-D52701C1A636}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Appication", "Appication", "{472EDB5E-9F2C-4551-AC96-D52701C1A636}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gym_oop_2024.Application", "src\Application\gym_oop_2024.Application\gym_oop_2024.Application.csproj", "{CB41BAB3-2742-49A4-9534-C33C9CC21103}"
 EndProject

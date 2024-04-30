@@ -1,11 +1,14 @@
 namespace gym_oop_2024.Application.Models.Models.Interfaces;
 
 public interface IGymService
-{
-    Gym GetGymById(int gymId);
-    IEnumerable<Gym> GetAllGyms();
-    IEnumerable<Gym> GetAllGymsByAddress(string GymAddress);
-    void AddGym(Gym gym);
-    void UpdateGym(Gym gym);
-    void DeleteGym(int gymId);
+{ 
+    Gym AddGym(Gym gym);
+
+    Gym UpdateGym(Guid gymId, Gym gym);
+    
+    void RemoveGym(Gym gym);
+
+    Gym GetGymById(Guid gymId);
+
+    IEnumerable<Gym> GetGyms();
 }
