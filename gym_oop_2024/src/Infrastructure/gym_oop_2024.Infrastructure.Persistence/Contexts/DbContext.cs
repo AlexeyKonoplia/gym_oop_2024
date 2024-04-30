@@ -14,9 +14,9 @@ public class DatabaseContext : DbContext
 
     protected DatabaseContext(DbContextOptions options) : base(options) { }
 
-    public DbSet<User> Users { get; protected init; } = null!;
+    public DbSet<UserModel> Users { get; protected init; } = null!;
 
-    public DbSet<UserSubscription> UserSubscriptions { get; protected init; } = null!;
+    public DbSet<UserSubscriptionModel> UserSubscriptions { get; protected init; } = null!;
 
     public DbSet<SubscriptionModel> Subscriptions { get; protected init; } = null!;
 

@@ -8,4 +8,8 @@
         <Folder Include="Controllers\"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\gym_oop_2024.Application.Models\gym_oop_2024.Application.Models.csproj" />
+    </ItemGroup>
+
 </Project>
