@@ -1,3 +1,4 @@
+using gym_oop_2024.Application.Abstractions.Repositories;
 using gym_oop_2024.Application.Models;
 using gym_oop_2024.Application.Models.Models.Interfaces;
 
@@ -5,33 +6,41 @@ namespace gym_oop_2024.Application.Services;
 
 public class UserService : IUserService
 {
-    public User GetUserById(int userId)
+    private readonly IUserRepository _userRepository;
+
+    public UserService(IUserRepository userRepository)
     {
-        throw new NotImplementedException();
+        _userRepository = userRepository;
     }
 
-    public User GetUserByPhone(string Phone)
+    public User GetUserById(Guid userId)
     {
-        throw new NotImplementedException();
+        return _userRepository.GetUserById(userId);
+    }
+
+    public User GetUserByPhone(string phone)
+    {
+        return _userRepository.GetUserByPhone(phone);
     }
 
     public IEnumerable<User> GetAllUsers()
     {
-        throw new NotImplementedException();
+        return _userRepository.GetAllUsers();
     }
 
-    public void AddUser(User user)
+    public User Add(User user)
     {
-        throw new NotImplementedException();
+        _userRepository.Add(user);
+        return user;
     }
 
-    public void UpdateUser(User user)
+    public void UpdateUser(Guid id, User user)
     {
-        throw new NotImplementedException();
+        _userRepository.UpdateUser(id, user);
     }
 
-    public void DeleteUser(int userId)
+    public void DeleteUser(Guid userId)
     {
-        throw new NotImplementedException();
+        _userRepository.DeleteUser(userId);
     }
 }
